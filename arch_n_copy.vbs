@@ -21,10 +21,10 @@ if  objArgs.Count > 0 then
 
 	Set Archer = CreateObject ("WScript.Shell")
 	Archer.Run "winrar a -m1 -ep -ibck "& filepath & year(CurrDate) & m & d & ".rar " & archpath ,0,true 
-	MoveARJ archpath 
+	MoveMDB archpath 
  end if
 
-function  MoveARJ (src)
+function  MoveMDB (src)
   on error resume next 
   ts = src
     Set fso = CreateObject("Scripting.FileSystemObject")
